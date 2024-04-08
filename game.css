@@ -1,0 +1,24 @@
+.canvas {
+    background-color: #00000000;
+    position: absolute;
+}
+
+.scrollbox {
+    background-color: #00000000;
+    position: absolute;
+    overflow: auto;
+    font: 12px Arial;
+    padding: 10px;
+    color: #ffffff;
+    height: 80%;
+    width: 50%;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
