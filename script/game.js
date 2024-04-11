@@ -119,7 +119,7 @@ function checkPlayerDeath() {
 
         // Switch the screen.
         const vse = new VisualEffect("gameend", null, fps / 2, null, null);
-        addVisualEffect(vse);
+        addVisualEffects(vse);
     }
 }
 
@@ -238,7 +238,7 @@ function initNewGame(diffi) {
     setRoundDescription();
 
     const vse = new VisualEffect("gamestart", null, fps / 2, null, null);
-    addVisualEffect(vse);
+    addVisualEffects(vse);
 
     const dwork = new DelayedWork(fps / 2, 0, () => {menuAlpha = 0;}, []);
     delayedWorks.set(dwork.id, dwork);

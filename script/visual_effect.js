@@ -567,7 +567,7 @@ function processVisualEffects() {
 }
 
 // Adds visual effects.
-function addVisualEffect(...list) {
+function addVisualEffects(...list) {
     for (const ve of list) {
         visualEffects.set(ve.id, ve);
     }

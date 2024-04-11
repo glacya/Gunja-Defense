@@ -198,7 +198,11 @@ class Tower {
         this.rangeFactor = rangeBoost * rangeDown;
 
         // Betrayed towers deal negative damage; they heal!
-        if (this.betrayed) this.damageFactor = -this.damageFactor;
+        // And even more, they cannot switch their preference.
+        if (this.betrayed) {
+            this.damageFactor = -this.damageFactor;
+            this.preference = TOWER_PREF_FIRST;
+        }
     }
 
     // Sells the tower, refunded by the (total gold spent on the tower) * `ratio`.
@@ -246,8 +250,10 @@ class Tower {
         return true;
     }
 
-    // Switches tower attack preference.
+    // Switches tower attack preference. Betrayed towers cannot switch its preference.
     switchPreference() {
+        if (this.betrayed) return;
+
         this.preference = (this.preference + 1) % 4;
         drawnStatics = false;
     }
@@ -275,7 +281,7 @@ class Tower {
                     fontSize: 24,
                     floatDistance: 40
                 });
-                addVisualEffect(mve);
+                addVisualEffects(mve);
 
                 boss.changeShield(diffBranch(5000, 10000, 12500));
             }
@@ -474,7 +480,7 @@ class Tower {
         const vse = new VisualEffect("radialin", "rgb(255, 255, 0)", fps / 2, this.position, { radius: 100 });
         drawnStatics = false;
 
-        addVisualEffect(vse);
+        addVisualEffects(vse);
     }
 
     // Checks if the tower can interact with camouflaged enemies.
@@ -489,6 +495,8 @@ function processTowers() {
         tower.update();
 
         if (tower.attack()) tower.attackTimer = globalGameTimer;
+
+        if (tower.betrayed) tower.active();
     }
 }
 

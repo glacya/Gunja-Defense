@@ -207,7 +207,7 @@ class FreezeTower extends Tower {
         if (effected > 0) {
             const vd = { radius: this.attackRange };
             const vse = new VisualEffect("radialout", this.attackColor, fps / 2, this.position, vd);
-            addVisualEffect(vse);
+            addVisualEffects(vse);
 
             return true;
         }
@@ -222,7 +222,7 @@ class FreezeTower extends Tower {
         const msd = { message: this.activeName[this.tier - 4], origin: this.id, size: this.size, fontSize: 30, floatDistance: 20, pop: true};
         const mv = new VisualEffect("message", this.baseColor, 1.5 * fps, this.position, msd);
         
-        addVisualEffect(vse, mv);
+        addVisualEffects(vse, mv);
 
         this.setStatusEffect(new CastingStatus(this.activeDuration, this.id));
 

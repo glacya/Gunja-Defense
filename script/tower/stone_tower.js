@@ -197,9 +197,7 @@ class StoneTower extends Tower {
             const p1 = new Projectile(vAdd(position, d1), v1, property, style, onCollide, onExpire);
             const p2 = new Projectile(vAdd(position, d2), v2, property, style, onCollide, onExpire);
 
-            projs.set(p0.id, p0);
-            projs.set(p1.id, p1);
-            projs.set(p2.id, p2);
+            addProjectiles(p0, p1, p2);
 
             if (++this.activeCount == this.activeMaxCount) {
                 this.activeCount = 0;
@@ -241,7 +239,7 @@ class StoneTower extends Tower {
         );
 
         const p0 = new Projectile(vAdd(this.position, dirVector), velocityVector, property, projStyle, onCollide, onExpire);
-        projs.set(p0.id, p0);
+        addProjectiles(p0);
 
         if (this.tier >= 3) {
             const theta = pi / 24;
@@ -254,8 +252,7 @@ class StoneTower extends Tower {
             const p1 = new Projectile(vAdd(position, d1), v1, property, style, onCollide, onExpire);
             const p2 = new Projectile(vAdd(position, d2), v2, property, style, onCollide, onExpire);
 
-            projs.set(p1.id, p1);
-            projs.set(p2.id, p2);
+            addProjectiles(p1, p2);
         }
 
         return true;
@@ -265,7 +262,7 @@ class StoneTower extends Tower {
         if (!super.active()) return false;
 
         const dve = new VisualEffect("darken", null, fps / 2, null, null);
-        addVisualEffect(dve);
+        addVisualEffects(dve);
 
         const cs = new CastingStatus(10 * fps, this.id);
         this.setStatusEffect(cs);
