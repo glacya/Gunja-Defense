@@ -265,7 +265,7 @@ class StoneTower extends Tower {
         if (!super.active()) return false;
 
         const dve = new VisualEffect("darken", null, fps / 2, null, null);
-        visualEffects.set(dve.id, dve);
+        addVisualEffect(dve);
 
         const cs = new CastingStatus(10 * fps, this.id);
         this.setStatusEffect(cs);

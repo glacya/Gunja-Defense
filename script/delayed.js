@@ -27,6 +27,13 @@ class DelayedWork {
     }
 }
 
+// Addes delayed works to Map.
+function addDelayedWork(...dw) {
+    for (const w of dw) {
+        delayedWorks.set(w.id, w);
+    }
+}
+
 // Processes delayed works.
 function processDelayedWorks() {
     for (const [wid, work] of delayedWorks) {

@@ -89,15 +89,14 @@ class EnemyPoisonStudent extends Enemy {
                             };
                             const mv = new VisualEffect("message", "rgb(47, 71, 104)", 0.5 * fps, tower.position, md);
 
-                            visualEffects.set(mv.id, mv);
+                            addVisualEffect(mv);
                         }
 
                         tower.setStatusEffect(aslow);
 
                         const ved = { endPosition: tower.position, laserWidth: 10 };
                         const vse = new VisualEffect("laser", "rgb(168, 64, 180)", fps / 3, e.position, ved);
-
-                        visualEffects.set(vse.id, vse);
+                        addVisualEffect(vse);
                         return true;
                     },
                     period: fps * 3
@@ -305,9 +304,7 @@ class EnemyTrickster extends Enemy {
                             floatDistance: 36,
                             pop: true
                         });
-
-                        visualEffects.set(cve.id, cve);
-                        visualEffects.set(mve.id, mve);
+                        addVisualEffect(cve, mve);
 
                         const hs = new HasteStatus(camoDuration, 1.5, e.id);
                         e.setStatusEffect(camoStatus);
@@ -319,7 +316,7 @@ class EnemyTrickster extends Enemy {
 
                             const healRange = 200;
                             const hve = new VisualEffect("growout", "rgb(127, 255, 127)", fps, e.position, {radius: healRange});
-                            visualEffects.set(hve.id, hve);
+                            addVisualEffect(hve);
                         }
 
                         return true;
@@ -356,8 +353,7 @@ class EnemyTrickster extends Enemy {
                 pop: true
             });
 
-            visualEffects.set(eve.id, eve);
-            visualEffects.set(mve.id, mve);
+            addVisualEffect(eve, mve);
 
             this.currentPhase = 2;
             this.elevated = true;

@@ -9,6 +9,7 @@ const sin = Math.sin;
 const cos = Math.cos;
 const floor = Math.floor;
 const sqrt = Math.sqrt;
+const random = Math.random;
 
 function min(x, y) {
     return (x < y ? x : y);
