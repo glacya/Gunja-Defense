@@ -25,13 +25,13 @@ class StoneTower extends Tower {
         // Cannon firing structure is improved. Gain 25% attack speed, and can now damage up to 2 targets.
         // Bullet damage is increased to 100. Gain 25% attack speed.
         // Installed more cannons. Now the turret fires 3 bullets every attack, and can now attack camouflaged enemies.
-        // Gain 100% attack speed. Bullet can now damage up to 3 targets.
+        // Gain 100% attack speed. Bullet can now damage up to 3 targets, and its damage is increased to 110.
         // It is a super-rapid firing masterpiece of the age!! Bullet damage is increased to 140, and can now damage up to 4 targets. Gain 100% attack speed.
         this.upgradeDescription = [
             "발사 구조를 개선하여 공격 속도가 25% 빨라지고, 최대 2명의 적에게 피해를 입힐 수 있게 됩니다.",
             "탄환의 피해량이 100으로 늘어나고, 공격 속도가 25% 빨라집니다.",
             "포신을 추가로 장착하여 공격 시 탄환을 3개씩 발사합니다. 이제 은신한 적을 공격할 수 있게 됩니다.",
-            "공격 속도가 100% 빨라집니다. 탄환이 최대 3명의 적에게 피해를 입힐 수 있게 됩니다.",
+            "공격 속도가 100% 빨라지며 탄환의 피해량이 110으로 늘어납니다. 탄환이 최대 3명의 적에게 피해를 입힐 수 있게 됩니다.",
             "엄청나게 빠르게 발사하는 시대의 걸작입니다! 탄환의 피해량이 140으로 늘어나고 최대 4명의 적에게 피해를 입히며 공격 속도가 100% 빨라집니다."
         ];
 
@@ -113,6 +113,7 @@ class StoneTower extends Tower {
                 this.projSize = 20;
                 this.pierce = 3;
                 this.attackPeriod = fps * 16 / 60;
+                this.attackDamage = 110;
                 this.gunWidth = 17;
 
                 this.drawPeriod = 6 * fps;
