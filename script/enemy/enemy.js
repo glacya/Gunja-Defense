@@ -944,7 +944,7 @@ function spawnEnemy() {
 function processEnemies() {
     for (const [eid, enemy] of enemies) {
         enemy.update();
-
+        
         if (enemy.expired) {
             if (!enemy.dead) {
                 // If enemy is not dead but is expired: meaning it escaped through your defense!
