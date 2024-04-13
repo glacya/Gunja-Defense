@@ -147,7 +147,7 @@ function inDeadClick(e) {
                 }
             }
             const dwork = new DelayedWork(fps / 2, -1, () => { menuKind = MENU; }, []);
-            delayedWorks.set(dwork.id, dwork);
+            addDelayedWorks(dwork);
         }
     }
     else {
@@ -168,7 +168,7 @@ function inDeadClick(e) {
             removeProgress("autosave");
 
             const dwork = new DelayedWork(fps / 2, -1, () => { menuKind = MENU; }, []);
-            delayedWorks.set(dwork.id, dwork);
+            addDelayedWorks(dwork);
         }
         else if (inRange(mPos, bc2, bSize)) {
             // Continue from autosave.
@@ -178,7 +178,7 @@ function inDeadClick(e) {
                 }
             }
             const dwork = new DelayedWork(fps / 2, -1, () => { menuKind = MENU; }, []);
-            delayedWorks.set(dwork.id, dwork);
+            addDelayedWorks(dwork);
         }
     }
 }

@@ -135,7 +135,7 @@ class GameProgress {
         addVisualEffects(vse);
 
         const dwork = new DelayedWork(fps / 2, 0, () => {menuAlpha = 0;}, []);
-        delayedWorks.set(dwork.id, dwork);
+        addDelayedWorks(dwork);
     }
 }
 
