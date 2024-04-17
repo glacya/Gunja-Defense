@@ -130,7 +130,6 @@ class EnemyPoisonStudent extends Enemy {
     }
 }
 
-
 class EnemyRogue extends Enemy {
     constructor(position) {
         super(position, {
@@ -177,7 +176,6 @@ class EnemyRogue extends Enemy {
     }
 }
 
-
 class EnemyHardBasic extends Enemy {
     constructor(position) {
         super(position, {
@@ -214,7 +212,6 @@ class EnemyHardBasic extends Enemy {
         super.draw(ctx);
     }
 }
-
 
 class EnemyDefSphere extends Enemy {
     constructor(position) {
@@ -275,7 +272,6 @@ class EnemyDefSphere extends Enemy {
         super.draw(ctx);
     }
 }
-
 
 class EnemyTrickster extends Enemy {
     constructor(position) {
