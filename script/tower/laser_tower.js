@@ -58,46 +58,6 @@ class LaserTower extends Tower {
         this.baseColor = "rgb(45, 83, 45)";
         this.gunTipColor = "rgb(9, 55, 9)";
         this.gunEdgeColor = "rgb(14, 97, 20)";
-        
-
-        this.attackPerSteam = 5;
-        this.steamRange = 150;
-        this.steamCount = 0;
-        this.steamDamage = 100;
-
-        this.explosionDamage = 100;
-        this.explosionRadius = 90;
-
-        this.projSpeed = 25;
-        this.projWidth = 4;
-        this.projLength = 24;
-        this.projSize = 12;
-        this.projLifetime = fps;
-
-        this.activePeriod = 24 * fps;
-        this.activeDelay = fps;
-        this.activeDuration = 4 * fps;
-        this.activeDamage = 500;
-        this.activeHpDamageRatio = 0.1;
-        this.activeBossDpsMax = 3000;
-        this.activeExecutionRatio = 0.2;
-
-        this.activeExplosionRadius = 130;
-        this.activeExplosionDamage = 200;
-        this.activeProjSpeed = 4;
-        this.activeProjSize = 80;
-        this.activeProjLifetime = 8 * fps;
-        this.activeBossDamageRatio = 2.0;
-        this.activeHealReductionRatio = 0.4;
-
-        this.baseColor = "rgb(145, 50, 201)";
-        this.poisonColor = "rgb(145, 50, 201)";
-        this.badPoisonColor = "rgb(106, 47, 125)";
-        this.gunColor = "rgb(60, 60, 60)";
-        this.borderColor = "rgb(62, 21, 85)";
-        this.waveColor = "rgba(62, 21, 85, 0.5)";
-        this.innerColor = "rgb(62, 21, 85)";
-        this.lineColor = "rgb(0, 0, 0)";
     }
 
     upgrade() {
