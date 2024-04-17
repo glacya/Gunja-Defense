@@ -84,7 +84,7 @@ class EnemyEliteSummoner extends Enemy {
     draw(ctx) {
         if (ctx != ctxpd && !this.readyGen && this.position.x <= winX * 0.9) {
             this.readyGen = true;
-            const work = (x) => { x.readyGen = true; };
+            const work = (x) => { x.startGen = true; };
             const dw = new DelayedWork(this.portal.delay, this.id, work, [this]);
             addDelayedWorks(dw);
 
@@ -123,7 +123,7 @@ class EnemyEliteSummoner extends Enemy {
             ctx.fill();
         }
 
-        const rg = tctx.createRadialGradient(0, 0, 1, 0, 0, size);
+        const rg = ctx.createRadialGradient(0, 0, 1, 0, 0, size);
         rg.addColorStop(0, "rgb(0, 64, 0)");
         rg.addColorStop(0.6 + 0.2 * sin(p * pi * 2), "rgb(0, 64, 0)");
         rg.addColorStop(1, "rgba(0, 64, 0, 0)");
