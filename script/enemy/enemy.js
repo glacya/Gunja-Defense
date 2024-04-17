@@ -816,7 +816,7 @@ function immunityDescription(kind) {
         case "elitepotal": return `화면의 왼쪽에 관문을 열어 2초마다 무작위 에너지 조각을 생성합니다. 생성된 에너지 조각에게 미지의 방패를 ${diffBranch(1, 2, 3)} 부여합니다.`;
         case "portal": return "화면의 왼쪽에 관문을 열어 2초마다 무작위 파편을 생성합니다.";
         case "curse": return `매 5초마다 괴상한 힘을 주변의 적에게 보내 이동 속도를 ${diffBranch(20, 20, 25)}% 빠르게 합니다.`;
-        case "distrain": return `매 ${diffBranch(16, 12, 8)}초마다 가장 많은 피해를 입힌 타워를 소모 금액의 ${diffBranch(100, 95, 95)}%의 가격으로 판매합니다. HP가 ${diffBranch(25, 50, 75)}% 이하라면 추가로 가장 가까운 타워를 하나 더 판매합니다.`;
+        case "distrain": return `매 ${diffBranch(16, 12, 8)}초마다 가장 많은 피해를 입힌 타워를 소모 금액의 ${diffBranch(100, 95, 90)}%의 가격으로 판매합니다. HP가 ${diffBranch(25, 50, 75)}% 이하라면 추가로 가장 가까운 타워를 하나 더 판매합니다.`;
         case "dismiss": return `HP가 25% 줄어들 때마다 ${diffBranch(3, 4, 5)}초간 무적이 되고 보호막을 최대 HP의 25%만큼 얻으며 모든 적에게서 기운을 빼앗습니다. 기운을 빼앗은 적 하나 당 보호막을 ${diffBranch(4000, 6000, 8000)}, 미지의 방패를 ${diffBranch(1, 1, 2)} 추가로 얻습니다.`;
         case "energysave": return `매 ${diffBranch(13, 11, 9)}초마다 전장의 불빛을 꺼 3.5초간 어둡게 만듭니다. 이 동안, 마우스 근처만 볼 수 있게 됩니다.`;
         case "frozenasset": return `매 ${diffBranch(11, 9, 7)}초마다 골드를 ${diffBranch(2, 2, 2.5)}초간 사용할 수 없게 합니다.`;
@@ -844,7 +844,7 @@ function immunityDescription(kind) {
         case "timereturn": return `시계가 2시, 8시를 가리킬 때, 시계의 지난 1시간 동안 처치된 적을 모두 부활시킵니다.`;
         case "arcanepower": return `시계가 5시를 가리킬 때, 모든 적의 HP를 적 최대 HP의 100%만큼 회복시키고, 보호막을 ${diffBranch(2500, 5000, 7500)}, 미지의 방패를 ${diffBranch(5, 6, 7)} 부여합니다. HP가 ${diffBranch(20, 40, 40)}% 이하라면 보호막을 2배로 부여합니다.`;
         case "axiomguard": return `시계가 9시를 가리킬 때, ${diffBranch(2, 2.75, 3.25)}초간 무적이 되며 HP를 ${diffBranch(300000, 400000, 550000)} + 잃은 HP의 ${diffBranch(6, 6, 8)}%만큼 회복합니다. 무적 시간은 HP가 80% 이하일 때 0.5초 늘어나고, 40% 이하일 때 추가로 0.5초 더 늘어납니다.`;
-        case "temporalecho": return `시계가 11시를 가리킬 때, 골드를 ${diffBranch(1, 1, 1.5)}초간 사용할 수 없게 하며, 모든 타워를 ${diffBranch(1.5, 1.75, 2.5)}초간 기절시킵니다.`;
+        case "temporalecho": return `시계가 11시를 가리킬 때, 골드를 ${diffBranch(1, 1, 1.5)}초간 사용할 수 없게 하며, 모든 타워를 ${diffBranch(1.5, 2, 2.5)}초간 기절시킵니다.`;
         default: return "알 수 없는 특성이군요. 세상엔 모르는게 너무나도 많군요.";
     }
 }
