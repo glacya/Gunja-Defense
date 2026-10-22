@@ -325,7 +325,7 @@ function loadProgress(kind) {
 
     if (!prog) return false;
 
-    const gp = Object.assign(new GameProgress, JSON.parse(prog));
+    const gp = Object.assign(new GameProgress(), JSON.parse(prog));
     gp.load();
 
     return true;
